@@ -140,6 +140,7 @@ class Giiker extends EventEmitter {
     }
 
     const device = await window.navigator.bluetooth.requestDevice({
+      acceptAllDevices: true,
       optionalServices: [SERVICE_UUID, SYSTEM_SERVICE_UUID],
     });
 
